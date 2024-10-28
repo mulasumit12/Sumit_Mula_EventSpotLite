@@ -1,0 +1,167 @@
+
+
+
+
+    .event-card {
+      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+      padding: 20px;
+      margin: 15px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      max-width: 300px;
+      text-align: center;
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    .move-left {
+      animation: moveLeft 1s forwards;
+    }
+    
+    @keyframes moveLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    
+    .move-right {
+      animation: moveRight 1s forwards;
+    }
+    
+    @keyframes moveRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    
+    .move-up {
+      animation: moveUp 1s forwards;
+    }
+    
+    @keyframes moveUp {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    .move-down {
+      animation: moveDown 1s forwards;
+    }
+    
+    @keyframes moveDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    /* Additional styles for other elements */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      animation: fadeInBackdrop 0.4s forwards;
+    }
+    
+    .modal-content {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      padding: 30px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    @keyframes fadeInBackdrop {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    /* Modal content styles */
+    .modal-content h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #333333;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    
+    .modal-content p {
+      font-size: 1rem;
+      color: #555555;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    
+    .modal-content img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .modal-content img:hover {
+      transform: scale(1.03);
+    }
+    
+    .modal-content button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 25px;
+      background: linear-gradient(135deg, #f093fb, #f5576c);
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    .modal-content button:hover {
+      background: linear-gradient(135deg, #c86dd7, #ee4b2b);
+    }
+    
+    .modal-content button:active {
+      transform: scale(0.97);
+    }
+    
